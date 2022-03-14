@@ -21,11 +21,10 @@ function Marks({ data, xScale, yScale, xValue, yValue, colorScale, colorValue, t
     const modalStyle = {
         overlay: { 
           backgroundColor: "grey",
-          opacity: "1%"
+          opacity: "2%"
         },
         content: {
           position: 'absolute',
-          opacity: "100%",
           top: '100px',
           left: '30%',
           right: '30%',
@@ -56,7 +55,7 @@ function Marks({ data, xScale, yScale, xValue, yValue, colorScale, colorValue, t
         <circle className= "circle" id = {d.Major_code} key={d.Major_code} cx={xScale(xValue(d))} cy={yScale(yValue(d))} r={circleRadius} fill={colorScale(colorValue(d))} fillOpacity="60%" stroke={colorScale(colorValue(d))} strokeOpacity="100%" onClick={() => openModal(d)}>
           <title>{tooltipFormat(xValue(d))}</title>
         </circle>
-        <Modal transparent={false} style={modalStyle} isOpen={isOpen} onRequestClose={closeModal} shouldCloseOnOverlayClick={true} contentLabel="My dialog">
+        <Modal style={modalStyle} isOpen={isOpen} onRequestClose={closeModal} shouldCloseOnOverlayClick={true} contentLabel="My dialog">
             <div>Major: {currentMajor.Major}</div>
             <div>Major Category: {currentMajor.Major_category}</div>
             <div>Percentage of Women: {(currentMajor.ShareWomen * 100).toFixed(2)}%</div>
