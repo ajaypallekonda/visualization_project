@@ -5,20 +5,23 @@ Modal.setAppElement("#root");
 
 function Filter({data}) {
     const [currMajorGroup, setCurrMajorGroup] = useState('');
+    var currItem;
+    var stringItem;
+    var currElement
 
     function onCurrCategoryChange(val){
         for(var i = 0; i < data.length; i++){  
             if (data[i].Major_category === val){
-                var currItem = data[i].Major_code
-                var stringItem = String(currItem);
-                var currElement = document.getElementById(stringItem);
+                currItem = data[i].Major_code
+                stringItem = String(currItem);
+                currElement = document.getElementById(stringItem);
                 currElement.setAttribute("fill-opacity", "60%");
                 currElement.setAttribute("stroke-opacity", "60%");
             
             } else{
-                var currItem = data[i].Major_code
-                var stringItem = String(currItem);
-                var currElement = document.getElementById(stringItem);
+                currItem = data[i].Major_code
+                stringItem = String(currItem);
+                currElement = document.getElementById(stringItem);
 
                 if (currElement !== null){
                     currElement.setAttribute("fill-opacity", "10%");

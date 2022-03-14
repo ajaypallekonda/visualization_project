@@ -1,6 +1,5 @@
-import React, { useState, useCallback, useEffect } from 'react';
-import ReactDOM from 'react-dom';
-import { csv, scaleLinear,  max, format, extent, scaleLinear as d3_scaleLinear, select as d3_select, scaleOrdinal } from 'd3';
+import React from 'react';
+import { scaleLinear, format, extent,scaleOrdinal } from 'd3';
 import { useData } from './useData';
 import { AxisBottom } from './AxisBottom';
 import { AxisLeft } from './AxisLeft';

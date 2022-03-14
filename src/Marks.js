@@ -52,7 +52,7 @@ function Marks({ data, xScale, yScale, xValue, yValue, colorScale, colorValue, t
     return (
       data.map(d => (
         <>
-        <circle className= "circle" id = {d.Major_code} key={d.Major_code} className="mark" cx={xScale(xValue(d))} cy={yScale(yValue(d))} r={circleRadius} fill={colorScale(colorValue(d))} fillOpacity="60%" stroke={colorScale(colorValue(d))} strokeOpacity="100%" onClick={() => openModal(d)}>
+        <circle className= "circle" id = {d.Major_code} key={d.Major_code} cx={xScale(xValue(d))} cy={yScale(yValue(d))} r={circleRadius} fill={colorScale(colorValue(d))} fillOpacity="60%" stroke={colorScale(colorValue(d))} strokeOpacity="100%" onClick={() => openModal(d)}>
           <title>{tooltipFormat(xValue(d))}</title>
         </circle>
         <Modal transparent={false} style={modalStyle} isOpen={isOpen} onRequestClose={closeModal} shouldCloseOnOverlayClick={true} contentLabel="My dialog">
