@@ -21,7 +21,7 @@ function Marks({ data, xScale, yScale, xValue, yValue, colorScale, colorValue, t
     const modalStyle = {
         overlay: { 
           backgroundColor: "grey",
-          opacity: "1%"
+          opacity: "2%"
         },
         content: {
           position: 'absolute',
